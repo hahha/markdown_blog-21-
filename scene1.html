@@ -1,0 +1,62 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Welcome to Heaven</title>  
+<style>  
+  body {  
+    /*CSS设计图片背景*/
+    background: url('/scene1.gif') no-repeat center center fixed;   
+    -webkit-background-size: cover;  
+    -moz-background-size: cover;  
+    -o-background-size: cover;  
+    background-size: cover;  
+  }  
+  
+  .welcome-container {  
+    position: relative; /* 相对于背景定位 */  
+    text-align: center;  
+    padding: 50px 0; /* 上下内边距 */  
+  }  
+  
+  .welcome-header {  
+    display: inline-block;  
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* 使用类似漫画的字体 */  
+    color: #666; /* 字体颜色根据背景调整 */  
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* 添加文字阴影，增加立体感 */  
+    font-size: 32px; /* 字体大小 */  
+    line-height: 1.2; /* 行高，调整文字间距 */  
+    margin: 0; /* 去除默认边距 */  
+    padding: 10px 20px; /* 内边距，增加立体感 */  
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景，增加可读性 */  
+    border-radius: 20px; /* 圆角 */  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影，增加立体感 */  
+  }  
+  
+  .welcome-link {  
+    display: inline-block;  
+    vertical-align: middle; /* 垂直居中 */  
+    margin-left: 10px; /* 与标题之间的间距 */  
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* 与标题相同字体 */  
+    color: #007bff; /* 链接颜色 */  
+    text-decoration: none; /* 去除下划线 */  
+    font-size: 24px; /* 链接字体大小 */  
+    transition: color 0.3s ease; /* 链接颜色过渡效果 */  
+  }  
+  
+  .welcome-link:hover {  
+    color: #0056b3; /* 链接点击时颜色 */  
+  }  
+</style>  
+</head>  
+<body>  
+  
+<div class="welcome-container">  
+  <div class="welcome-header">Welcome to the blessed world of Heaven.</div>  
+  <a href="/login" class="welcome-link">Click here to login!</a>  
+  <a href="/register" class="welcome-link">Click here to register!</a>  
+</div>  
+  
+</body>  
+</html>
