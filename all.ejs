@@ -1,0 +1,107 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <title>Blog</title>  
+  <style>  
+   body {  
+      background-image: url('/pic3.jpg');  
+      background-size: cover;  
+      background-position: center;  
+      background-repeat: no-repeat;  
+      min-height: 100vh;  
+      margin: 0;  
+      padding: 0;  
+      color: #333; /* 基础文本颜色，与背景形成对比 */  
+      font-family: 'SimHei', 'FangSong', serif; /* 使用中文传统字体 */  
+    }  
+  
+    .container {  
+      max-width: 800px;  
+      margin: 20px auto;  
+      background-color: rgba(255, 255, 255, 0.8);  
+      padding: 20px;  
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+      border-radius: 10px;  
+    }  
+  
+    h1 {  
+      color: #FF9933;  
+      text-align: center;  
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);  
+    }  
+  
+    h2 {  
+      color: #FFCC66;  
+      text-align: left;  
+      font-size: 1.2em;  
+    }  
+  
+    a {  
+      color: #FF6633;  
+      text-decoration: none;  
+      border-bottom: 2px solid #FF6633;  
+      transition: all 0.3s ease;  
+    }  
+  
+    a:hover {  
+      color: #FFCC66;  
+      border-bottom-color: #FFCC66;  
+    }  
+  
+    .article-list {  
+      list-style-type: none;  
+      padding: 0;  
+    }  
+  
+    .article-list li {  
+      margin-bottom: 20px;  
+    }  
+  
+    .article-title {  
+      font-size: 1.2em;  
+      font-weight: bold;  
+    }  
+  
+    .article-description {  
+      font-size: 0.9em;  
+      color: #666;  
+    }    
+    .article-actions {  
+      display: flex;  
+      justify-content: space-between;  
+      align-items: center;  
+    }  
+  
+    .article-actions button {  
+      margin-left: 10px; /* 设置按钮之间的间距 */  
+    }  
+  
+    .article-actions button:first-child {  
+      margin-left: 0; /* 第一个按钮不需要左边距 */  
+    }  
+  </style>  
+</head>  
+<body>  
+  <div class="container">  
+    <h1 class="mb-4">Welcome To My Blog!</h1>  
+    <h2 class="mb-4">欢迎来到我的博客</h2>  
+    <a href="/new" style="border: 3px solid pink; float: right; text-decoration: none; padding: 5px 10px;">New Article</a>  
+    <hr />  
+  
+    <ul class="article-list">  
+      <% articles.forEach(article => { %>  
+        <li> 
+          <h2 class="article-title"><%= article.title %></h2>  
+          <p class="article-description"><%= article.description %></p>   
+           <div class="article-actions">  
+            <a href="/edit/<%= article._id %>" class="edit-button">Edit</a>  
+            <form action="/<%= article._id %>?_method=DELETE" method="POST" class="delete-form">  
+              <button type="submit" class="delete-button">Delete</button>  
+            </form> 
+         </div>
+        </li>  
+      <% }) %>  
+    </ul>  
+  </div>  
+</body>
+</html>
