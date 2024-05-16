@@ -1,0 +1,85 @@
+<!DOCTYPE html>    
+<html lang="en">    
+<head>    
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Login</title>    
+    <style>  
+        body {    
+            background: url('/pic3.jpg') no-repeat center center fixed;   
+            -webkit-background-size: cover;  
+            -moz-background-size: cover;  
+            -o-background-size: cover;  
+            background-size: cover;  
+            margin: 0;  
+            padding: 0;  
+            color: #fff; /* 文本颜色设为白色，与橙黄色背景形成对比 */  
+            font-family: 'SimHei', 'FangSong', serif; /* 使用中文传统字体 */  
+        }  
+  
+        .container {  
+            display: flex;  
+            flex-direction: column;  
+            align-items: center;  
+            justify-content: center;  
+            height: 100vh;  
+            text-align: center;  
+        }  
+  
+        h1 {  
+            color: #fff;  
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  
+            margin-bottom: 20px;  
+        }  
+  
+        #loginForm {  
+            background-color: rgba(255, 255, 255, 0.5); /* 半透明白色背景 */  
+            padding: 20px;  
+            border-radius: 10px;  
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  
+        }  
+  
+        #loginForm label {  
+            display: block;  
+            margin-bottom: 5px;  
+        }  
+  
+        #loginForm input[type="text"],  
+        #loginForm input[type="password"] {  
+            width: 100%;  
+            padding: 10px;  
+            margin-bottom: 10px;  
+            border-radius: 5px;  
+            border: 1px solid #ccc;  
+        }  
+  
+        #loginForm button {  
+            padding: 10px 20px;  
+            background-color: #FF8C00; /* 橙黄色按钮背景 */  
+            color: #fff;  
+            border: none;  
+            border-radius: 5px;  
+            cursor: pointer;  
+        }  
+  
+        #loginForm button:hover {  
+            background-color: #FF6300; /* 橙黄色按钮点击效果 */  
+        }  
+    </style>  
+</head>    
+<body>    
+    <div class="container">  
+        <h1>Login</h1>    
+        <form action="/login" method="POST" id="loginForm">    
+            <label for="username">Username:</label>    
+            <input type="text" id="username" name="username" required>    
+    
+            <label for="password">Password:</label>    
+            <input type="password" id="password" name="password" required>    
+    
+            <button type="submit">Login</button>      
+        </form>    
+    </div>   
+    <script src="../js/login.js"></script> /*更新login.js的引用*/
+</body>    
+</html>
