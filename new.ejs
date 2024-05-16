@@ -1,0 +1,98 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>New Article</title>  
+<style>  
+    body {    
+        background-image: url('/pic3.jpg');    
+        background-size: cover;  
+        background-position: center;  
+        background-repeat: no-repeat;  
+        min-height: 100vh;  
+        margin: 0;  
+        padding: 0;  
+        font-family: 'Noto Serif', serif; /* 使用一种适合敦煌风格的字体 */  
+        color: #fff; /* 根据背景色调整字体颜色 */  
+    }  
+  
+    h1 {  
+        text-align: center;  
+        color: #fff;  
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 添加文字阴影 */  
+    }  
+  
+    form {  
+        max-width: 600px;  
+        margin: 0 auto;  
+        padding: 20px;  
+        background-color: rgba(255, 255, 255, 0.1); /* 轻微半透明背景 */  
+        border-radius: 10px;  
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 添加阴影 */  
+    }  
+  
+    label {  
+        display: block;  
+        margin-bottom: 10px;  
+        font-weight: bold;  
+    }  
+  
+    input[type="text"], textarea {  
+        width: 100%;  
+        padding: 10px;  
+        border-radius: 5px;  
+        border: 1px solid rgba(255, 255, 255, 0.5);  
+        background-color: rgba(255, 255, 255, 0.1);  
+        color: #fff;  
+        font-size: 16px;  
+    }  
+  
+    textarea {  
+        height: 150px;  
+    }  
+  
+    a, button {  
+        display: inline-block;  
+        margin-right: 10px;  
+        padding: 10px 20px;  
+        border-radius: 5px;  
+        font-size: 16px;  
+        text-decoration: none;  
+        color: #fff;  
+        background-color: #FF6633; /* 橙色按钮 */  
+        border: none;  
+        cursor: pointer;  
+        transition: all 0.3s ease;  
+    }  
+  
+    a {  
+        background-color: #f0f0f0; /* 灰色取消按钮 */  
+        color: #333;  
+    }  
+  
+    a:hover, button:hover {  
+        opacity: 0.8;  
+    }  
+</style>  
+</head>  
+<body>  
+<h1>New Article</h1>  
+  
+<form action="/new" method="POST">  
+    <div>  
+        <label for="title">Title</label>  
+        <input required type="text" name="title" id="title">  
+    </div>  
+  
+    <div>  
+        <label for="description">Description</label>  
+        <textarea name="description" id="description"></textarea>  
+    </div>  
+  
+    <a href="/">Cancel</a>  
+    <button type="submit">Save</button>  
+</form>  
+  
+</body>  
+</html>
