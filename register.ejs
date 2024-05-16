@@ -1,0 +1,85 @@
+<!DOCTYPE html>    
+<html lang="en">    
+<head>    
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Register</title>    
+    <style>  
+        body {    
+            background-image: url('/pic3.jpg');    
+            background-size: cover;    
+            background-position: center;    
+            background-repeat: no-repeat;    
+            min-height: 100vh;    
+            margin: 0;    
+            padding: 0;    
+            color: #fff; /* 根据背景颜色选择文本颜色 */  
+            font-family: 'SimHei', 'FangSong', serif;    
+            display: flex;  
+            justify-content: center;  
+            align-items: center;  
+            flex-direction: column;  
+            text-align: center;  
+        }  
+  
+        h1 {  
+            color: #fff;  
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 添加文字阴影 */  
+        }  
+  
+        form {  
+            background-color: rgba(255, 255, 255, 0.7); /* 半透明白色背景 */  
+            border-radius: 10px;  
+            padding: 20px;  
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 添加阴影 */  
+            max-width: 400px; /* 限制表单宽度 */  
+        }  
+  
+        label {  
+            display: block;  
+            margin-bottom: 10px;  
+        }  
+  
+        input[type="text"],  
+        input[type="password"] {  
+            width: 100%;  
+            padding: 10px;  
+            border-radius: 5px;  
+            border: 1px solid #ccc;  
+            margin-bottom: 15px;  
+        }  
+  
+        button[type="submit"] {  
+            background-color: #FF8C00; /* 橙黄色背景 */  
+            border: none;  
+            color: #fff;  
+            padding: 10px 20px;  
+            border-radius: 5px;  
+            cursor: pointer;  
+            font-size: 16px;  
+            transition: background-color 0.3s ease; /* 添加过渡效果 */  
+        }  
+  
+        button[type="submit"]:hover {  
+            background-color: #FF6600; /* 鼠标悬停时改变颜色 */  
+        }  
+    </style>  
+</head>    
+<body>  
+    <h1>Register</h1>  
+    <form action="/register" method="POST" id="registerForm">  
+        <label for="username">Username:</label>  
+        <input type="text" id="username" name="username" required>  
+  
+        <label for="password">Password:</label>  
+        <input type="password" id="password" name="password" required>  
+
+        <label for="email">Email:</label>  
+        <input type="text" id="email" name="email" required> 
+  
+        <button type="submit">Register</button>  
+    </form>  
+  
+   <script src="../js/register.js"></script> 
+</body>  
+</html>
