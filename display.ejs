@@ -1,0 +1,69 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <title>Blog</title>  
+  <style>  
+    body {    
+      background-image: url('/pic3.jpg');    
+      background-size: cover;  
+      background-position: center;  
+      background-repeat: no-repeat;  
+      min-height: 100vh;  
+      margin: 0;  
+      padding: 0;  
+      font-family: 'Noto Serif', serif; /* 使用适合敦煌风格的字体 */  
+      color: #fff; /* 根据背景色调整字体颜色 */  
+    }  
+  
+    /* 标题样式 */  
+    h1 {  
+      text-align: center;  
+      color: #FFB700; /* 使用与背景相协调的颜色 */  
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 添加文字阴影 */  
+      padding: 20px 0; /* 上下内边距 */  
+    }  
+  
+    /* 段落样式 */  
+    p {  
+      color: #fff; /* 确保文本在背景上可见 */  
+      font-size: 18px; /* 字体大小 */  
+      line-height: 1.5; /* 行高 */  
+      padding: 10px 0; /* 上下内边距 */  
+    }  
+  
+    /* 链接样式 */  
+    a {  
+      color: #FF6633; /* 橙色链接 */  
+      text-decoration: none; /* 去除下划线 */  
+      padding: 10px 20px; /* 内边距 */  
+      background-color: rgba(255, 255, 255, 0.1); /* 半透明背景 */  
+      border-radius: 5px; /* 圆角 */  
+      transition: all 0.3s ease; /* 过渡效果 */  
+    }  
+  
+    a:hover {  
+      background-color: rgba(255, 255, 255, 0.2); /* 链接点击时背景色加深 */  
+    }  
+  
+    /* 添加一些页面布局样式 */  
+    .container {  
+      max-width: 800px; /* 最大宽度 */  
+      margin: 0 auto; /* 居中对齐 */  
+      padding: 20px; /* 内边距 */  
+      background-color: rgba(0, 0, 0, 0.3); /* 半透明黑色背景，增加文本可读性 */  
+      border-radius: 10px; /* 圆角 */  
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 阴影效果 */  
+    }  
+  </style>  
+</head>  
+  
+<body>  
+  <div class="container">  
+    <h1>Title</h1>  
+    <p><%= article.title %></p>  
+    <h1>Description</h1>  
+    <p><%= article.description %></p>  
+    <a href="/">HOME</a>  
+  </div>  
+</body>  
+</html>
